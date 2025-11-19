@@ -1,0 +1,96 @@
+/* Signup Component Styles */
+
+/* Main container - centers the form on the page with beige background */
+/* Uses min-height instead of height to allow scrolling if content exceeds viewport */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Minimum full viewport height */
+  background-color: #F5F5DC; /* Beige background color */
+  padding: 2rem 0; /* Vertical padding for smaller screens */
+}
+
+/* Form container - white background with shadow and rounded corners */
+.signup-form {
+  background-color: white;
+  padding: 2rem; /* 2rem padding around form content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 400px; /* Maximum width for responsiveness */
+}
+
+/* Form title styling */
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Space below title */
+  color: #333; /* Dark gray text color */
+}
+
+/* Form group container - groups label and input/select together */
+.form-group {
+  margin-bottom: 1rem; /* Space between form groups */
+}
+
+/* Label styling within form groups */
+.form-group label {
+  display: block; /* Block display for full width */
+  margin-bottom: 0.5rem; /* Space below label */
+  font-weight: bold; /* Bold font weight */
+  color: #555; /* Medium gray text color */
+}
+
+/* Input and select field styling - applies to both input and select elements */
+.form-group input,
+.form-group select {
+  width: 100%; /* Full width of container */
+  padding: 0.75rem; /* Padding inside fields */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+}
+
+/* Input and select focus state - highlights focused fields with beige border */
+.form-group input:focus,
+.form-group select:focus {
+  outline: none; /* Remove default outline */
+  border-color: #F5F5DC; /* Beige border on focus */
+  box-shadow: 0 0 0 2px rgba(245, 245, 220, 0.5); /* Beige glow effect */
+}
+
+/* Signup button styling */
+.signup-btn {
+  width: 100%; /* Full width button */
+  padding: 0.75rem; /* Padding inside button */
+  background-color: #F5F5DC; /* Beige background */
+  color: #333; /* Dark text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth color transition */
+  margin-top: 1rem; /* Extra space above button */
+}
+
+/* Signup button hover state - slightly darker beige */
+.signup-btn:hover {
+  background-color: #E8E8CC; /* Lighter beige on hover */
+}
+
+/* Paragraph styling for login link */
+.signup-form p {
+  text-align: center;
+  margin-top: 1rem; /* Space above paragraph */
+}
+
+/* Link styling within the form */
+.signup-form a {
+  color: #000000; /* Black link color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Link hover state - adds underline on hover */
+.signup-form a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

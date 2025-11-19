@@ -1,0 +1,145 @@
+.courses-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.courses-canvas {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.courses-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.courses-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.courses-class-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.courses-class-tab {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.courses-class-tab:hover {
+  background-color: #d0d0d0;
+}
+
+.courses-class-tab.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.courses-content-area {
+  margin-top: 20px;
+}
+
+.courses-streams-list h3,
+.courses-subjects-list h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.courses-streams-grid,
+.courses-subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.courses-stream-card,
+.courses-subject-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courses-stream-card:hover,
+.courses-subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses-stream-card h4,
+.courses-subject-card h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.courses-stream-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.courses-back-button {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.courses-back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .courses-canvas {
+    padding: 20px;
+  }
+
+  .courses-title {
+    font-size: 2rem;
+  }
+
+  .courses-class-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .courses-class-tab {
+    width: 200px;
+  }
+
+  .courses-streams-grid,
+  .courses-subjects-grid {
+    grid-template-columns: 1fr;
+  }
+}
