@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 2rem; /* Padding for spacing from navbar and footer */
-  background-color: #F5F5DC; /* Beige background color */
+  height: 100vh; /* Full viewport height */
+  background-color: #f5f5dc; /* Beige background color */
 }
 
 /* Form container - white background with shadow and rounded corners */
@@ -51,12 +51,12 @@
 /* Input focus state - highlights focused input with beige border */
 .form-group input:focus {
   outline: none; /* Remove default outline */
-  border-color: #F5F5DC; /* Beige border on focus */
+  border-color: #f5f5dc; /* Beige border on focus */
   box-shadow: 0 0 0 2px rgba(245, 245, 220, 0.5); /* Beige glow effect */
 }
 
 /* Login button styling */
-.login-btn {
+/*.login-btn {
   width: 100%; 
   padding: 0.75rem;
   background-color: #F5F5DC; 
@@ -69,8 +69,8 @@
 } 
 
 /* Login button hover state - slightly darker beige */
-.login-btn:hover {
-  background-color: #E8E8CC; /* Lighter beige on hover */
+/*.login-btn:hover {
+  background-color: #E8E8CC; 
 }
 
 /* Paragraph styling for signup link */

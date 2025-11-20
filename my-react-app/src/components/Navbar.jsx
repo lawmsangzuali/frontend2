@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { useLanguage } from '../contexts/LanguageContext';
 import '../css/Navbar.css';
+import { useLanguage } from '../contexts/LanguageContext';
+
 
 const Navbar = () => {
   const [contrast, setContrast] = useState(false);
   const [fontSize, setFontSize] = useState(1);
-  const { language, switchLanguage, t } = useLanguage();
+  const { t, switchLanguage } = useLanguage();
 
-  const toggleContrast = () => {
+{/*const toggleContrast = () => {
     setContrast(!contrast);
     document.body.classList.toggle('high-contrast');
-  };
+  };*/}
 
   const increaseFont = () => {
     setFontSize(prev => Math.min(prev + 0.1, 1.5));
@@ -24,7 +25,6 @@ const Navbar = () => {
     document.documentElement.style.fontSize = `${fontSize * 100}%`;
   };
 
-
   return (
     <>
       {/* Top Slim Strip */}
@@ -32,11 +32,11 @@ const Navbar = () => {
         <div className="strip-text">
         </div>
         <div className="strip-controls">
-          <button onClick={toggleContrast} className="accessibility-btn" aria-label="Toggle contrast">
+      {/*   <button onClick={toggleContrast} className="accessibility-btn" aria-label="Toggle contrast">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
-          </button>
+          </button>*/}
           <button onClick={decreaseFont} className="accessibility-btn" aria-label="Decrease font size">
             A-
           </button>
@@ -91,19 +91,18 @@ const Navbar = () => {
           <li className="nav-item dropdown">
             <a href="#registration">{t('registration')}</a>
             <ul className="dropdown-menu">
-                <li><Link to="/login">{t('students')}</Link></li>
-                <li><Link to="/upcoming">{t('teachers')}</Link></li>
-               <li><Link to="/upcoming">{t('experts')}</Link></li>
-
+              <li><a href="#students">{t('students')}</a></li>
+              <li><a href="/upcoming">{t('teachers')}</a></li>
+              <li><a href="/upcoming">{t('experts')}</a></li>
             </ul>
           </li>
           <li className="nav-item dropdown">
-            <a href="#explore-services">{t('services')}</a>
+            <a href="/courses">{t('services')}</a>
             <ul className="dropdown-menu">
-              <li><a href="#explore-services">{t('online')}</a></li>
-              <li><span className="locked-link">{t('offline')} <span className="lock-icon">🔒</span></span></li>
-              <li><span className="locked-link">{t('classroom')} <span className="lock-icon">🔒</span></span></li>
-              <li><span className="locked-link">{t('softwareDev')} <span className="lock-icon">🔒</span></span></li>
+              <li><a href="/courses">{t('online')}</a></li>
+              <li><a href="/upcoming">{t('offline')}</a></li>
+              <li><a href="/upcoming">{t('classroom')}</a></li>
+              <li><a href="/upcoming">{t('softwareDev')}</a></li>
             </ul>
           </li>
           <li className="nav-item dropdown">
@@ -113,34 +112,34 @@ const Navbar = () => {
             </ul>
           </li>
           {/*<li className="nav-item dropdown">
-            <a href="#councelling">Councelling</a>
+            <a href="#councelling">{t('counselling')}</a>
              <ul className="dropdown-menu">
               <li><a href="#career">Career Councelling</a></li>
               <li><a href="#admission-in-india">Admission in India</a></li>
               <li><a href="#admission-in-abroad">Admission in Abroad</a></li>
-            </ul> 
+            </ul>
           </li>*/}
            <li className="nav-item">
-           <span className="locked-link">
-             {t('counselling')} <span className="lock-icon">🔒</span>
-           </span>
-         </li>
-         <li className="nav-item">
-           <span className="locked-link">
-             {t('forum')} <span className="lock-icon">🔒</span>
-           </span>
-         </li>
-         <li className="nav-item">
-           <span className="locked-link">
-             {t('Insight')} <span className="lock-icon">🔒</span>
-           </span>
-         </li>
+            <span className="locked-link">
+              {t('counselling')} <span className="lock-icon">🔒</span>
+            </span>
+          </li>
+          <li className="nav-item">
+            <span className="locked-link">
+              {t('forum')} <span className="lock-icon">🔒</span>
+            </span>
+          </li>
+          <li className="nav-item">
+            <span className="locked-link">
+              {t('insight')} <span className="lock-icon">🔒</span>
+            </span>
+          </li>
           {/*} <li className="nav-item dropdown">
-            <a href="#training">Training</a>
+            <a href="#training">{t('training')}</a>
              <ul className="dropdown-menu">
               <li><a href="#industrial">Industrial</a></li>
               <li><a href="#specialized">Specialized</a></li>
-            </ul> 
+            </ul>
           </li> */}
           <li className="nav-item">
             <span className="locked-link">
